@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/utilitys.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Post One</title>
+  </head>
+  <body id="home">
+    <header class="hero blog">
+      <div class="navbar">
+        <h1 class="logo">
+          <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span
+          >Ledger
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#cases">Cases</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#contact">Contant</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        <h1>Blog</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="post">
+        <h2>Blog Post One</h2>
+        <p class="meta">
+          <i class="fas fa-user"></i> Posted By <strong>John Doe</strong> | May
+          16 2022
+        </p>
+        <img src="img/blog/blog1.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          assumenda aut corrupti laborum! Facere laboriosam quisquam labore
+          exercitationem voluptates fugiat?
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, adipisci
+          nulla debitis laboriosam dolorum at corporis, recusandae dolorem
+          doloribus sequi consequatur, voluptate quisquam! Omnis dolorem ad quo
+          officia obcaecati. Natus, magni. Sit doloribus iusto, ipsam totam
+          pariatur magni reiciendis sed vel, possimus aliquam harum? Commodi
+          natus molestiae itaque quisquam molestias reiciendis, ullam ab iste
+          eum, eaque fuga odit modi ducimus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          fugit aspernatur possimus, velit suscipit eveniet accusantium tempore
+          iure, magni molestiae fugiat, veritatis quidem culpa. Libero voluptas
+          doloremque esse accusantium doloribus, iure tenetur quae, at et
+          temporibus odio aliquam. Tenetur, voluptas?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe
+          adipisci dicta voluptatum, necessitatibus accusamus sint quidem autem
+          cupiditate est modi, minus sapiente! Ipsam veniam, suscipit iste esse
+          nihil necessitatibus ipsa porro voluptates id. Doloribus quae
+          reprehenderit delectus voluptatum vel, ipsa excepturi iure, ullam
+          accusantium, fugiat ratione dolor nobis aliquid maiores!
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; 2022 - EdgeLedger</p>
+    </footer>
+
+    <script>
+      document.querySelector('html').style.scrollBehavior = 'smooth';
+      const navbar = document.querySelector('.navbar');
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove('top');
+          if (!scrolled) {
+            navbar.style.transfrom = 'translateY(-70px)';
+          }
+          setTimeout(() => {
+            navbar.style.transfrom = '0';
+            scrolled = false;
+          }, 200);
+        } else {
+          navbar.classList.add('top');
+          scrolled = false;
+        }
+      };
+    </script>
+  </body>
+</html>
